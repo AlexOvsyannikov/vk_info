@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+<body>
+    {% block content %}
+        <div align="center">
+            <h1>Вставьте ссылку на страницу</h1>
+            <form action="" method="post" name="vk_link">
+                {{form.hidden_tag()}}
+                <p>
+                    Вставьте ссылку на страницу:<br>
+                    {{form.vk_link(size=80)}}<br>
+                </p>
+                <p><input type="submit" value="Получить данные"></p>
+            </form>
+        </div>
+    {% endblock %}
+</body>

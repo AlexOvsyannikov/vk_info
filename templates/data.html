@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+<body>
+    {% block content %}
+        <div class="content_vk_data" align="center">
+        <img src={{ url_for("static", filename=img_path) }}>
+        <form action="/" method="post" name="back">
+            <p ><input type="submit" value="Назад"></p>
+        </form>
+        {%for line in data %}
+            <p>{{ line }}</p>
+        {% endfor %}
+        </div>
+    {% endblock %}
+</body>
